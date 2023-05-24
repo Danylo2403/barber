@@ -160,6 +160,13 @@ img {
   margin-left: 40px;
 }
 
+.header-logo:hover {
+  color: aqua;
+}
+.header-logo:focus {
+  color: aqua;
+}
+
 /**-------------- HERO------------------ */
 
 .hero {

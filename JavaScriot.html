@@ -3,86 +3,60 @@
   <head>
     <title>Приклад JavaScript</title>
     <script src="lr4.js"></script>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="" />
   </head>
-      <header class="header">
-      <div class="container header-container">
-        <nav class="header-navigation">
-          <a href="./index.html" class="header-logo">
-            <img src="./images/logo.svg" alt="site logo" />
-          </a>
-          <ul class="header-list list">
-            <li class="header-item">
-              <a class="header-link link" href="./about.html"> About</a>
-            </li>
-            <li class="header-item">
-              <a class="header-link link" href="./prices.html"
-                >Services and prices</a
-              >
-            </li>
-            <li class="header-item">
-              <a class="header-link link" href="./barbers.html">Barbers</a>
-            </li>
-            <li class="header-item">
-              <a class="header-link link" href="./contacts.html">Contacts</a>
-            </li>
-            <li class="header-item">
-              <a class="header-link link" href="./singl.html">singl</a>
-            </li>
-            <li class="header-item">
-              <a class="header-link link" href="./JavaScriot.html">singl</a>
-            </li>
-          </ul>
-        </nav>
-        <address class="header-address">
-          <a class="header-address-link link" href="tel:+380441111111"
-            >+38 044 111 11 11</a
-          >
-        </address>
-        <button type="button" class="header-btn btn">Online-booking</button>
-      </div>
-    </header>
+  <header class="header">
+    <div class="container header-container">
+      <nav class="header-navigation">
+        <a href="./index.html" class="header-logo">
+          <img src="./images/logo.svg" alt="site logo" />
+        </a>
+        <ul class="header-list list">
+          <li class="header-item">
+            <a class="header-link link" href="./about.html"> About</a>
+          </li>
+          <li class="header-item">
+            <a class="header-link link" href="./prices.html"
+              >Services and prices</a
+            >
+          </li>
+          <li class="header-item">
+            <a class="header-link link" href="./barbers.html">Barbers</a>
+          </li>
+          <li class="header-item">
+            <a class="header-link link" href="./contacts.html">Contacts</a>
+          </li>
+          <li class="header-item">
+            <a class="header-link link" href="./singl.html">singl</a>
+          </li>
+          <li class="header-item">
+            <a class="header-link link" href="./JavaScriot.html">singl</a>
+          </li>
+        </ul>
+      </nav>
+      <address class="header-address">
+        <a class="header-address-link link" href="tel:+380441111111"
+          >+38 044 111 11 11</a
+        >
+      </address>
+      <button type="button" class="header-btn btn">Online-booking</button>
+    </div>
+  </header>
   <body>
-    <section>
-      <script>
-    function calculateDaysToNextFriday13() {
-      var inputDate = document.getElementById("inputDate").value;
-      var currentDate = new Date();
-      var targetDate = new Date(inputDate);
+    <h1>JavaScript</h1>
 
-      // Встановлюємо дату наступної п'ятниці 13-го
-      while (targetDate.getDay() !== 5 || targetDate.getDate() !== 13) {
-        targetDate.setDate(targetDate.getDate() + 1);
-      }
+    <form id="myForm">
+      <label for="hours">Кількість годин до початку літа:</label>
+      <input type="text" id="hours" name="hours" readonly />
+      <br />
+      <input type="button" value="OK" onclick="calculateHours()" />
+      <input type="button" value="ОТМЕНА" />
+    </form>
 
-      var timeDiff = targetDate.getTime() - currentDate.getTime();
-      var daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
+    <a href="#" onclick="showEventCount()">Натисніть сюди</a> для перевірки
+    кількості спрацьовувань обробника події в поточну хвилину.
 
-      document.getElementById("resultField").value = daysDiff;
-    }
-  </script>
-</head>
-<body>
-  <h1>Кількість днів до найближчої п'ятниці 13</h1>
-  <form>
-    <label for="inputDate">Введіть дату:</label>
-    <input type="date" id="inputDate" required>
-    <button type="button" onclick="calculateDaysToNextFriday13()">ОК</button>
-    <button type="reset">ОТМЕНА</button>
-  </form>
-  <br>
-  <label for="resultField">Кількість днів до п'ятниці 13:</label>
-  <input type="text" id="resultField" readonly>
-    </section>
-    <section>
-      <a href="#" onclick="showCurrentTime()">Натисніть тут</a>, щоб відобразити
-      поточний час.
-      <script>
-        function showCurrentTime() {
-          var currentTime = new Date();
-          alert("Поточний час: " + currentTime);
-        }
-      </script>
-    </section>
+    <script src="lr4.js"></script>
   </body>
 </html>
