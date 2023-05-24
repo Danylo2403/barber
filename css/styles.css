@@ -483,3 +483,13 @@ img {
   letter-spacing: 0.02em;
   color: #9da4bd;
 }
+
+.singl {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  counter-reset: fieldsets;
+  padding: 20px;
+  width: 400px;
+}
